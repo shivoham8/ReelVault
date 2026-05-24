@@ -1,16 +1,95 @@
-# React + Vite
+# 🎬 ReelVault
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Browse and organize your saved Instagram reels & posts — privately, locally, beautifully.
 
-Currently, two official plugins are available:
+**Live Demo → [reel-vault-rho.vercel.app](https://reel-vault-rho.vercel.app/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## What is this?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Instagram lets you save posts and organize them into collections — but their app makes it painful to browse them. No grid view, no search, no way to see everything at once.
 
-## Expanding the ESLint configuration
+ReelVault fixes that. Drop in your Instagram data export ZIP and instantly get a clean, fast grid of all your saved reels and posts, organized by collection.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Everything runs in your browser. No data is uploaded anywhere.**
+
+---
+
+## Features
+
+- 📦 Drop your Instagram export ZIP — no account login needed
+- 🗂️ Browse by collection (Travel, Motivation, Shopping, etc.)
+- 🖼️ Real thumbnails fetched automatically
+- ⚡ Instant filtering between collections
+- 🔒 100% local — your data never leaves your device
+- 🌙 Dark mode UI
+
+---
+
+## How to use
+
+### Step 1 — Export your Instagram data
+
+1. Open Instagram → tap **☰ Menu** → **Settings**
+2. Go to **Accounts Center** → **Your information and permissions**
+3. Select **Download your information** → **Download or transfer information**
+4. Choose your account → **Some of your information**
+5. Select **Saved posts and collections**
+6. Choose **Download to device**, format **JSON**
+7. You'll get an email with a ZIP file — download it
+
+### Step 2 — Use ReelVault
+
+1. Go to **[reel-vault-rho.vercel.app](https://reel-vault-rho.vercel.app/)**
+2. Drop your ZIP file onto the page (or click to browse)
+3. Your saved posts and collections load instantly
+
+---
+
+## Tech stack
+
+| Tool | Purpose |
+|------|---------|
+| React + Vite | Frontend framework |
+| Tailwind CSS | Styling |
+| JSZip | Parsing the Instagram ZIP in the browser |
+| Microlink API | Fetching reel thumbnails |
+| Vercel | Deployment |
+
+---
+
+## Run locally
+
+```bash
+git clone https://github.com/your-username/reel-vault.git
+cd reel-vault
+npm install
+npm run dev
+```
+
+Open [localhost:5173](http://localhost:5173)
+
+---
+
+## Privacy
+
+ReelVault processes your ZIP file entirely in your browser using the [File API](https://developer.mozilla.org/en-US/docs/Web/API/File) and [JSZip](https://stuk.github.io/jszip/). No file contents are sent to any server. Thumbnail images are fetched via [Microlink](https://microlink.io) using only the public Instagram post URLs.
+
+---
+
+## Contributing
+
+PRs welcome! Some ideas for what could be added:
+
+- Search across captions
+- Sort by date saved
+- Export a collection as a list of links
+- Tag posts manually
+- Persistent storage so you don't re-upload every time
+
+---
+
+## License
+
+MIT
