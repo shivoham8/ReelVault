@@ -74,8 +74,7 @@ Open [localhost:5173](http://localhost:5173)
 
 ## Privacy
 
-ReelVault processes your ZIP file entirely in your browser using the [File API](https://developer.mozilla.org/en-US/docs/Web/API/File) and [JSZip](https://stuk.github.io/jszip/). No file contents are sent to any server. Thumbnail images are fetched via [Microlink](https://microlink.io) using only the public Instagram post URLs.
-
+ReelVault processes your ZIP file entirely in your browser using the [File API](https://developer.mozilla.org/en-US/docs/Web/API/File) and [JSZip](https://stuk.github.io/jszip/). No file contents are sent to any server.
 ---
 
 ## Contributing
